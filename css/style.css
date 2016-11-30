@@ -1,0 +1,202 @@
+/*
+*   SIZES
+*/
+/*
+*   COLORS
+*/
+body {
+  margin-top: 135px;
+  margin-bottom: 66px;
+  text-decoration: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px; }
+  @media all and (max-width: 970px) {
+    body {
+      margin-top: 60px; } }
+
+.container {
+  display: block;
+  width: 1170px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box; }
+  @media all and (max-width: 1200px) {
+    .container {
+      width: 960px; } }
+  @media all and (max-width: 970px) {
+    .container {
+      width: 100%; } }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+.clearfix {
+  float: none;
+  clear: both; }
+
+div {
+  display: block; }
+
+.hideOnMobile {
+  display: inline; }
+  @media all and (max-width: 970px) {
+    .hideOnMobile {
+      display: none; } }
+
+.hideOnDesktop {
+  display: none; }
+  @media all and (max-width: 971px) {
+    .hideOnDesktop {
+      display: inline; } }
+
+.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding-top: 20px;
+  border-top: 5px solid #e02129;
+  border-bottom: 2px solid #eee;
+  min-height: 135px;
+  box-sizing: border-box; }
+  @media all and (max-width: 971px) {
+    .top {
+      padding-top: 5px;
+      text-align: center;
+      min-height: 60px; } }
+  .top .logoShower {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1em;
+    line-height: 2.4em; }
+    .top .logoShower span {
+      font-weight: 700; }
+  .top .logo {
+    width: auto;
+    max-width: 110px;
+    height: auto;
+    transition: 0.7s opacity;
+    transition: 0.2s zoom; }
+    .top .logo:hover {
+      opacity: 0.85;
+      zoom: 98.5%; }
+  .top nav {
+    margin-top: 20px;
+    float: right; }
+    .top nav ul {
+      list-style: none; }
+      .top nav ul li {
+        position: relative;
+        display: inline;
+        margin-right: 15px; }
+        .top nav ul li a {
+          line-height: 1.6em;
+          text-decoration: none;
+          font-size: 1.05em;
+          color: #333;
+          transition: 0.7s color;
+          letter-spacing: 0.005em; }
+          .top nav ul li a img {
+            margin-top: -2px;
+            margin-right: 5px;
+            width: 25px;
+            height: auto; }
+          .top nav ul li a:hover {
+            color: #000; }
+        .top nav ul li:hover:after, .top nav ul li.active:after {
+          width: 100%; }
+      .top nav ul li:after {
+        transition: 0.7s all;
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 0;
+        bottom: -7px;
+        border-bottom: 1px solid #333; }
+      .top nav ul li:last-of-type {
+        margin-right: 0; }
+      .top nav ul li.active a {
+        color: #e02129; }
+      .top nav ul li.selectedLanguage {
+        border: 2px solid #e02129;
+        padding: 10px;
+        border-radius: 3px; }
+
+.mobileMenuBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 2px solid #eee; }
+  .mobileMenuBar nav {
+    margin: 0;
+    text-align: center; }
+    .mobileMenuBar nav ul {
+      margin: 10px 0;
+      padding-left: 0;
+      text-align: center; }
+      .mobileMenuBar nav ul li {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 32.5%;
+        border-right: 1px solid #ddd;
+        text-align: center; }
+        .mobileMenuBar nav ul li a {
+          text-align: center;
+          display: block;
+          text-decoration: none;
+          color: #333; }
+      .mobileMenuBar nav ul li:last-of-type {
+        margin-right: 0;
+        border-right: none; }
+
+.mobileMenu {
+  display: none;
+  position: absolute;
+  z-index: 1030;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 100px;
+  background: #fff;
+  border-right: 2px solid #ddd; }
+  .mobileMenu nav {
+    width: 100%;
+    min-height: 100%; }
+    .mobileMenu nav ul {
+      margin: 0;
+      padding: 0; }
+      .mobileMenu nav ul li {
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+        box-sizing: border-box; }
+        .mobileMenu nav ul li a {
+          padding-left: 15px;
+          display: block;
+          line-height: 3.3em;
+          color: #333;
+          text-decoration: none; }
+          .mobileMenu nav ul li a img {
+            width: 20px;
+            margin-right: 5px; }
+        .mobileMenu nav ul li:hover a {
+          color: #ddd; }
+
+.closeMobileMenuButton {
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 5px;
+  padding: 7px;
+  z-index: 1050;
+  background-color: #e02129;
+  color: #fff;
+  border-radius: 3px;
+  border: 1px solid #e02129; }
+  .closeMobileMenuButton i {
+    margin-right: 5px; }

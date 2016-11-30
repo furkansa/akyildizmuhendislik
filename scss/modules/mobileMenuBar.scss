@@ -1,0 +1,33 @@
+.mobileMenuBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 2px solid $standardGray;
+    nav {
+        margin: 0;
+        text-align: center;
+        ul {
+            margin: 10px 0;
+            padding-left: 0;
+            text-align: center;
+            li {
+                box-sizing: border-box;
+                display: inline-block;
+                width: 32.5%;
+                border-right: 1px solid $darkerGray;
+                text-align: center;
+                a {
+                    text-align: center;
+                    display: block;
+                    text-decoration: none;
+                    color: $coolBlack;
+                }
+            }
+            li:last-of-type {
+                margin-right: 0;
+                border-right: none;
+            }
+        }
+    }
+}

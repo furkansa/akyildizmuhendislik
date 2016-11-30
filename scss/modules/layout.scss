@@ -1,0 +1,56 @@
+body {
+    margin-top: $fixed-top-menu-size;
+    margin-bottom: $mobile-menu-bar-size;
+    text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    @media all and(max-width: 970px){
+        margin-top: 60px;
+    }
+}
+
+.container {
+    display: block;
+    width: 1170px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    @media all and(max-width: 1200px) {
+        width: 960px;
+    }
+    @media all and(max-width: 970px) {
+        width: 100%;
+    }
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+div {
+    display: block;
+}
+
+.hideOnMobile {
+    display: inline;
+    @media all and (max-width: 970px) {
+        display: none;
+    }
+}
+
+.hideOnDesktop {
+    display: none;
+    @media all and(max-width: 971px) {
+        display: inline;
+    }
+}

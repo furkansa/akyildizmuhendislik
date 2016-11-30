@@ -1,0 +1,92 @@
+.top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding-top: 20px;
+    border-top: 5px solid $akyildizRed;
+    border-bottom: 2px solid $standardGray;
+    min-height: $fixed-top-menu-size;
+    box-sizing: border-box;
+    @media all and( max-width: 971px) {
+        padding-top: 5px;
+        text-align: center;
+        min-height: 60px;
+    }
+    .logoShower {
+        color: $coolBlack;
+        text-decoration: none;
+        font-size: 1.1em;
+        line-height: 2.4em;
+        span {
+            font-weight: 700;
+        }
+    }
+    .logo {
+        width: auto;
+        max-width: 110px;
+        height: auto;
+        transition: 0.7s opacity;
+        transition: 0.2s zoom;
+        &:hover {
+            opacity: 0.85;
+            zoom: 98.5%;
+        }
+    }
+    nav {
+        margin-top: 20px;
+        float: right;
+        ul {
+            list-style: none;
+            li {
+                position: relative;
+                display: inline;
+                margin-right: 15px;
+                a {
+                    line-height: 1.6em;
+                    text-decoration: none;
+                    font-size: 1.05em;
+                    color: $coolBlack;
+                    transition: 0.7s color;
+                    letter-spacing: 0.005em;
+                    img {
+                        margin-top: -2px;
+                        margin-right: 5px;
+                        width: 25px;
+                        height: auto;
+                    }
+                    &:hover {
+                        color: #000;
+                    }
+                }
+                &:hover:after,
+                &.active:after {
+                    width: 100%;
+                }
+            }
+            li:after {
+                transition: 0.7s all;
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 0;
+                bottom: -7px;
+                border-bottom: 1px solid $coolBlack;
+            }
+            li:last-of-type {
+                margin-right: 0;
+            }
+            li.active {
+                a {
+                    color: $akyildizRed;
+                }
+            }
+            li.selectedLanguage {
+                border: 2px solid $akyildizRed;
+                padding: 10px;
+                border-radius: 3px;
+            }
+        }
+    }
+}
