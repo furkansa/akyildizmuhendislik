@@ -1,12 +1,11 @@
 body {
     margin-top: $fixed-top-menu-size;
-    margin-bottom: $mobile-menu-bar-size;
     text-decoration: none;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
-    @media all and(max-width: 970px){
-        margin-top: 60px;
-    }
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
 }
 
 .container {
@@ -53,4 +52,13 @@ div {
     @media all and(max-width: 971px) {
         display: inline;
     }
+}
+
+.oneOverThird{
+    display: inline-block;
+    width: 33%;
+}
+.oneOverTwo{
+    display: inline-block;
+    width: 60%;
 }

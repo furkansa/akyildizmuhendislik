@@ -5,14 +5,13 @@
 *   COLORS
 */
 body {
-  margin-top: 135px;
-  margin-bottom: 66px;
+  margin-top: 114px;
   text-decoration: none;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 16px; }
-  @media all and (max-width: 970px) {
-    body {
-      margin-top: 60px; } }
+  font-size: 16px;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important; }
 
 .container {
   display: block;
@@ -53,59 +52,58 @@ div {
     .hideOnDesktop {
       display: inline; } }
 
+.oneOverThird {
+  display: inline-block;
+  width: 33%; }
+
+.oneOverTwo {
+  display: inline-block;
+  width: 60%; }
+
 .top {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
-  padding-top: 20px;
   border-top: 5px solid #e02129;
   border-bottom: 2px solid #eee;
-  min-height: 135px;
   box-sizing: border-box; }
-  @media all and (max-width: 971px) {
+  @media all and (max-width: 970px) {
     .top {
-      padding-top: 5px;
       text-align: center;
-      min-height: 60px; } }
-  .top .logoShower {
-    color: #333;
-    text-decoration: none;
-    font-size: 1.1em;
-    line-height: 2.4em; }
-    .top .logoShower span {
-      font-weight: 700; }
+      position: absolute; } }
   .top .logo {
-    width: auto;
-    max-width: 110px;
-    height: auto;
-    transition: 0.7s opacity;
-    transition: 0.2s zoom; }
+    margin: 15px 0;
+    transition: all 0.7s ease; }
     .top .logo:hover {
-      opacity: 0.85;
-      zoom: 98.5%; }
+      transform: scale(1.05); }
+    @media all and (max-width: 970px) {
+      .top .logo {
+        width: 150px; } }
   .top nav {
-    margin-top: 20px;
     float: right; }
     .top nav ul {
-      list-style: none; }
+      margin: 0;
+      list-style: none;
+      line-height: 104px; }
       .top nav ul li {
         position: relative;
         display: inline;
-        margin-right: 15px; }
+        margin-right: 13px; }
         .top nav ul li a {
-          line-height: 1.6em;
+          line-height: 72px;
           text-decoration: none;
           font-size: 1.05em;
           color: #333;
           transition: 0.7s color;
           letter-spacing: 0.005em; }
           .top nav ul li a img {
-            margin-top: -2px;
+            vertical-align: middle;
             margin-right: 5px;
-            width: 25px;
-            height: auto; }
+            width: 22px;
+            height: auto;
+            margin-top: -3px; }
           .top nav ul li a:hover {
             color: #000; }
         .top nav ul li:hover:after, .top nav ul li.active:after {
@@ -157,7 +155,7 @@ div {
 
 .mobileMenu {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 1030;
   top: 0;
   bottom: 0;
@@ -183,20 +181,34 @@ div {
           text-decoration: none; }
           .mobileMenu nav ul li a img {
             width: 20px;
-            margin-right: 5px; }
+            margin-right: 5px;
+            margin-top: -3px; }
         .mobileMenu nav ul li:hover a {
-          color: #ddd; }
+          color: #000; }
 
 .closeMobileMenuButton {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 25px;
-  right: 5px;
+  right: 15px;
   padding: 7px;
   z-index: 1050;
   background-color: #e02129;
   color: #fff;
   border-radius: 3px;
-  border: 1px solid #e02129; }
+  border: 1px solid #e02129;
+  font-weight: 400; }
   .closeMobileMenuButton i {
     margin-right: 5px; }
+
+footer {
+  display: block;
+  background: #eee;
+  padding: 10px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 0.9em;
+  box-sizing: border-box; }
+  @media all and (max-width: 970px) {
+    footer {
+      display: none; } }

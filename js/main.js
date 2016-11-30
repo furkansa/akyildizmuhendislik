@@ -1,5 +1,5 @@
 var scroll;
-$(window).scroll(function(event) {
+/*$(window).scroll(function (event) {
     scroll = $(window).scrollTop();
     if (scroll > 150 && $('#akyildizImgLogo').css('display') === 'inline' && $(window).width() > 970) {
         $('#akyildizImgLogo').css('display', 'none');
@@ -17,9 +17,10 @@ $(window).scroll(function(event) {
         return;
     }
 });
+*/
 
-$(window).resize(function(){
-    if($('body').width() < 970 && $('#mobileMenu').is(':visible')){
+$(window).resize(function () {
+    if ($('body').width() < 970 && $('#mobileMenu').is(':visible')) {
         closeMobileMenu();
     }
 });
@@ -30,6 +31,7 @@ function openMobileMenu() {
 }
 
 function closeMobileMenu() {
+    console.log('open');
     $('#mobileMenu').slideUp("700");
     $('#mobileMenuCloseButton').slideUp("700");
 }

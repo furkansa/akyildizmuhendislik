@@ -1,6 +1,6 @@
 .mobileMenu {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 1030;
     top: 0;
     bottom: 0;
@@ -27,10 +27,11 @@
                     img{
                         width: 20px;
                         margin-right: 5px;
+                        margin-top: -3px;
                     }
                 }
                 &:hover a{
-                    color: $darkerGray;
+                    color: $nightBlack;
                 }
             }
         }
@@ -39,15 +40,16 @@
 
 .closeMobileMenuButton{
     display: none;
-    position: absolute;
+    position: fixed;
     top: 25px;
-    right: 5px;
+    right: 15px;
     padding: 7px;
     z-index: 1050;
     background-color: $akyildizRed;
     color: #fff;
     border-radius:3px;
     border: 1px solid $akyildizRed;
+    font-weight: 400;
     i{
         margin-right: 5px;
     }

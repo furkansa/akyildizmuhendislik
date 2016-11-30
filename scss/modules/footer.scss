@@ -1,0 +1,12 @@
+footer {
+    display: block;
+    background: $standardGray;
+    padding: 10px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 0.9em;
+    box-sizing: border-box;
+    @media all and(max-width: 970px) {
+        display: none;
+    }
+}
