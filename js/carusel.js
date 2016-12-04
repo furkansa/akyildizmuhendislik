@@ -4,6 +4,7 @@ var pauseTime = 3000;
 var currentSlide;
 var slideHolder;
 var interval;
+var showers;
 $(window).resize(function() {
     if (interval)
         clearInterval(interval);
@@ -14,13 +15,14 @@ $(window).resize(function() {
     carousel();
 });
 $(document).ready(function() {
-    currentSlide = 1;
+    showers = [].slice.call($('.carousel-Boxes').children());
+    currentSlide = 0;
     carousel();
 });
 
 function carousel() {
     width = $('.container').width() + 30;
-
+    carouselCurrentSlideShower = $('.carousel-Boxes');
     slideHolder = $('#carouselContainer');
 
     $('.carusel-image').css({
@@ -34,18 +36,27 @@ function carousel() {
             $(slideHolder).animate({
                 'margin-left': '-=' + width
             }, animationSpeed, function() {
-                if (++currentSlide === $(slideHolder).children().length) {
-                    currentSlide = 1;
+                showers.forEach(function(i) {
+                    $(i).children().removeClass('active');
+                });
+                $(showers[currentSlide+1]).children().addClass('active');
+                if (++currentSlide === $(slideHolder).children().length - 1) {
+                    currentSlide = 0;
                     clearInterval(interval);
                     setTimeout(function() {
                         $(slideHolder).css({
                             'margin-left': 0
                         });
+                        showers.forEach(function(i) {
+                            $(i).children().removeClass('active');
+                        });
+                        $(showers[currentSlide]).children().addClass('active');
                         startSlider();
                         return;
                     }, pauseTime);
 
                 }
+
             });
         }, pauseTime);
     }
