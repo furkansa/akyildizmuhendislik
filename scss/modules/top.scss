@@ -9,6 +9,7 @@
     border-bottom: 2px solid $standardGray;
     //min-height: $fixed-top-menu-size;
     box-sizing: border-box;
+    background: white;
     @media all and( max-width: 970px) {
         text-align: center;
         position: absolute;

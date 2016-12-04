@@ -19,7 +19,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=latin-ext"
         rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
@@ -60,7 +60,7 @@
                     <a href="tel:0212-438-07-65"><i class="fa fa-phone" aria-hidden="true"></i><br>Telefon</a>
                 </li>
                 <li>
-                    <a href="geo:41.067405,28.8615668"><i class="fa fa-location-arrow" aria-hidden="true"></i><br>Harita</a>
+                    <a rel="nofollow"" href="geo:41.067405,28.8615668" id="locationFinder"><i class="fa fa-location-arrow" aria-hidden="true"></i><br>Harita</a>
                 </li>
             </ul>
         </nav>
@@ -83,9 +83,52 @@
         </nav>
     </aside>
     <button class="closeMobileMenuButton hideOnDesktop" id="mobileMenuCloseButton" onclick="closeMobileMenu();"><i class="fa fa-times" aria-hidden="true"></i>KAPAT</button>
+    <div class="clearfix container hero">
+        <div class="carusel">
+            <div class="carusel-data">
+                <ul id="carouselContainer">
+                    <li>
+                        <div class="carusel-selection" id="1">
+                            <img class="carusel-image" src="img/carusel/textilia-solingen-cımbız-makas.png">
+                            <div class=carusel-slogan>ALMAN TEXTILIA - SOLINGEN® CIMBIZ & MAKASLAR</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="carusel-selection" id="2">
+                            <img class="carusel-image" src="img/carusel/japon-yellowstone-alman-textilia-solingen-lup.png">
+                            <div class=carusel-slogan>JAPON - ALMAN - YELLOWSTONE® LUPLAR</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="carusel-selection" id="1">
+                            <img class="carusel-image" src="img/carusel/textilia-solingen-cımbız-makas.png">
+                            <div class=carusel-slogan>ALMAN TEXTILIA - SOLINGEN® CIMBIZ & MAKASLAR</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="carusel-selection" id="2">
+                            <img class="carusel-image" src="img/carusel/japon-yellowstone-alman-textilia-solingen-lup.png">
+                            <div class=carusel-slogan>JAPON - ALMAN - YELLOWSTONE® LUPLAR</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+            <div class="carusel-boxes">
+                <a href="#"><div class="carusel-box"></div></a>
+                <a href="#"><div class="carusel-box"></div></a>
+                <a href="#"><div class="carusel-box"></div></a>
+                <a href="#"><div class="carusel-box"></div></a>
+            </div>
+        </div>
+    </div>
     <div class="clearfix container" style="height:10000px">
         hey
     </div>
+
+
+    
     <footer>
         <div class="container">
             Some Rights Reserved 2016
@@ -96,6 +139,7 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/carusel.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

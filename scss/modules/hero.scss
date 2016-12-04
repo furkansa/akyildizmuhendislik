@@ -1,0 +1,129 @@
+/*.hero {
+    position: relative;
+    padding-top: 30px;
+    text-align: center;
+    @media all and (max-width: 800px) {
+        padding-top: 0;
+        margin-top: -28px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -1em;
+        margin-left: -350px;
+        line-height: 1.5em;
+        color: white;
+        font-size: 1.7em;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+        color: rgba(255, 255, 255, 0.95);
+        @media all and(max-width: 800px) {
+            font-size: 1.3em;
+            margin-left: -296px;
+            margin-top: -0.6em;
+        }
+        @media all and(max-width: 480px) {
+            font-size: 0.8em;
+            margin-left: -190px;
+            margin-top: -1.2em;
+        }
+        @media all and(max-width: 414px) {
+            font-size: 0.6em;
+            margin-left: -151px;
+            margin-top: -1.2em;
+        }
+        @media all and(max-width: 320px) {
+            font-size: 0.55em;
+            margin-left: -135px;
+            margin-top: -1.2em;
+        }
+    }
+}
+*/
+
+.hero {
+    background: #f3f3f3;
+    padding-left: 0;
+    padding-right: 0;
+    .carusel {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+        ul{
+            margin:0;
+            padding: 0;
+            float: left;
+            width: 6000px;
+            li{
+                list-style: none;
+                float: left;
+            }
+        }
+        .carusel-slogan{
+            font-family: "Raleway";
+            position: absolute;
+            color: $coolBlack;
+            bottom: 50px;
+            font-size: 1.3em;
+            letter-spacing: 0.02em;
+            width: 100%;
+            @media all and (max-width:480px){
+                font-size: 0.9em;
+                bottom: 18px;
+            }
+            @media all and (max-width:360px){
+                font-size: 0.6em;
+                bottom: 15px;
+            }
+        }
+        .carusel-image{
+            width: 100%;
+        }
+        .fa {
+            position: absolute;
+            font-size: 2em;
+            color: $akyildizRed;
+            margin-top: -0.5em;
+            z-index: 996;
+            top: 50%;
+            @media all and(max-width: 480px) {
+                font-size: 1.4em;
+            }
+        }
+        .fa-chevron-left {
+            left: 25px;
+        }
+        .fa-chevron-right {
+            right: 25px;
+        }
+        .carusel-boxes {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            @media all and(max-width: 480px) {
+                bottom: -5px;
+            }
+            .carusel-box {
+                display: inline-block;
+                background: white;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+            }
+            .carusel-box.active {
+                background: $coolBlack;
+            }
+        }
+    }
+}

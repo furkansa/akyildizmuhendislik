@@ -19,6 +19,10 @@ var scroll;
 });
 */
 
+if (navigator.userAgent.match(/(\(iPod|\(iPhone|\(iPad)/)) {
+    $('#locationFinder').attr('href','http://maps.apple.com/?ll=41.067405,28.8615668');
+}
+
 $(window).resize(function () {
     if ($('body').width() < 970 && $('#mobileMenu').is(':visible')) {
         closeMobileMenu();

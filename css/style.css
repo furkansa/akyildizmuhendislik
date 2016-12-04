@@ -5,13 +5,16 @@
 *   COLORS
 */
 body {
-  margin-top: 114px;
+  margin-top: 140px;
   text-decoration: none;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 16px;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important; }
+  @media all and (max-width: 960px) {
+    body {
+      margin-top: 86px; } }
 
 .container {
   display: block;
@@ -60,6 +63,9 @@ div {
   display: inline-block;
   width: 60%; }
 
+.hide {
+  display: none; }
+
 .top {
   position: fixed;
   top: 0;
@@ -68,7 +74,8 @@ div {
   z-index: 999;
   border-top: 5px solid #e02129;
   border-bottom: 2px solid #eee;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background: white; }
   @media all and (max-width: 970px) {
     .top {
       text-align: center;
@@ -130,7 +137,9 @@ div {
   bottom: 0;
   left: 0;
   right: 0;
-  border-top: 2px solid #eee; }
+  border-top: 2px solid #eee;
+  background: #fff;
+  z-index: 999; }
   .mobileMenuBar nav {
     margin: 0;
     text-align: center; }
@@ -212,3 +221,120 @@ footer {
   @media all and (max-width: 970px) {
     footer {
       display: none; } }
+
+/*.hero {
+    position: relative;
+    padding-top: 30px;
+    text-align: center;
+    @media all and (max-width: 800px) {
+        padding-top: 0;
+        margin-top: -28px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -1em;
+        margin-left: -350px;
+        line-height: 1.5em;
+        color: white;
+        font-size: 1.7em;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+        color: rgba(255, 255, 255, 0.95);
+        @media all and(max-width: 800px) {
+            font-size: 1.3em;
+            margin-left: -296px;
+            margin-top: -0.6em;
+        }
+        @media all and(max-width: 480px) {
+            font-size: 0.8em;
+            margin-left: -190px;
+            margin-top: -1.2em;
+        }
+        @media all and(max-width: 414px) {
+            font-size: 0.6em;
+            margin-left: -151px;
+            margin-top: -1.2em;
+        }
+        @media all and(max-width: 320px) {
+            font-size: 0.55em;
+            margin-left: -135px;
+            margin-top: -1.2em;
+        }
+    }
+}
+*/
+.hero {
+  background: #f3f3f3;
+  padding-left: 0;
+  padding-right: 0; }
+  .hero .carusel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    text-align: center; }
+    .hero .carusel ul {
+      margin: 0;
+      padding: 0;
+      float: left;
+      width: 6000px; }
+      .hero .carusel ul li {
+        list-style: none;
+        float: left; }
+    .hero .carusel .carusel-slogan {
+      font-family: "Raleway";
+      position: absolute;
+      color: #333;
+      bottom: 50px;
+      font-size: 1.3em;
+      letter-spacing: 0.02em;
+      width: 100%; }
+      @media all and (max-width: 480px) {
+        .hero .carusel .carusel-slogan {
+          font-size: 0.9em;
+          bottom: 18px; } }
+      @media all and (max-width: 360px) {
+        .hero .carusel .carusel-slogan {
+          font-size: 0.6em;
+          bottom: 15px; } }
+    .hero .carusel .carusel-image {
+      width: 100%; }
+    .hero .carusel .fa {
+      position: absolute;
+      font-size: 2em;
+      color: #e02129;
+      margin-top: -0.5em;
+      z-index: 996;
+      top: 50%; }
+      @media all and (max-width: 480px) {
+        .hero .carusel .fa {
+          font-size: 1.4em; } }
+    .hero .carusel .fa-chevron-left {
+      left: 25px; }
+    .hero .carusel .fa-chevron-right {
+      right: 25px; }
+    .hero .carusel .carusel-boxes {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      text-align: center; }
+      @media all and (max-width: 480px) {
+        .hero .carusel .carusel-boxes {
+          bottom: -5px; } }
+      .hero .carusel .carusel-boxes .carusel-box {
+        display: inline-block;
+        background: white;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%; }
+      .hero .carusel .carusel-boxes .carusel-box.active {
+        background: #333; }

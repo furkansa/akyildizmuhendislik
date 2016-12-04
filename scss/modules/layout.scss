@@ -6,6 +6,9 @@ body {
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
+    @media all and(max-width:960px){
+        margin-top: $fixed-top-menu-size-mobile;
+    }
 }
 
 .container {
@@ -61,4 +64,7 @@ div {
 .oneOverTwo{
     display: inline-block;
     width: 60%;
+}
+.hide{
+    display: none;
 }
