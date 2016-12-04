@@ -275,7 +275,8 @@ footer {
 .hero {
   background: #f3f3f3;
   padding-left: 0;
-  padding-right: 0; }
+  padding-right: 0;
+  border-bottom: 1px solid #ddd; }
   .hero .carusel {
     position: relative;
     width: 100%;

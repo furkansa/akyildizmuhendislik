@@ -53,22 +53,23 @@
     background: #f3f3f3;
     padding-left: 0;
     padding-right: 0;
+    border-bottom: 2px solid $standardGray;
     .carusel {
         position: relative;
         width: 100%;
         overflow: hidden;
         text-align: center;
-        ul{
-            margin:0;
+        ul {
+            margin: 0;
             padding: 0;
             float: left;
             width: 6000px;
-            li{
+            li {
                 list-style: none;
                 float: left;
             }
         }
-        .carusel-slogan{
+        .carusel-slogan {
             font-family: "Raleway";
             position: absolute;
             color: $coolBlack;
@@ -76,16 +77,16 @@
             font-size: 1.3em;
             letter-spacing: 0.02em;
             width: 100%;
-            @media all and (max-width:480px){
+            @media all and (max-width: 480px) {
                 font-size: 0.9em;
                 bottom: 18px;
             }
-            @media all and (max-width:360px){
+            @media all and (max-width:360px) {
                 font-size: 0.6em;
                 bottom: 15px;
             }
         }
-        .carusel-image{
+        .carusel-image {
             width: 100%;
         }
         .fa {
